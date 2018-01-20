@@ -1,0 +1,23 @@
+{
+  "name": "getstartedexpress",
+  "version": "1.0.0",
+  "description": "Basic application using express and node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesuspinedaq/GetStartedExpress.git"
+  },
+  "keywords": [
+    "express",
+    "node"
+  ],
+  "author": "Jesus Pineda Q.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesuspinedaq/GetStartedExpress/issues"
+  },
+  "homepage": "https://github.com/jesuspinedaq/GetStartedExpress#readme"
+}
