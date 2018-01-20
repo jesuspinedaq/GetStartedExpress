@@ -4,6 +4,7 @@
   "description": "Basic application using express and node",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/jesuspinedaq/GetStartedExpress/issues"
   },
-  "homepage": "https://github.com/jesuspinedaq/GetStartedExpress#readme"
+  "homepage": "https://github.com/jesuspinedaq/GetStartedExpress#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.13.3",
+    "mongodb": "^3.0.1"
+  }
 }
