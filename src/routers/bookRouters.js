@@ -1,27 +1,14 @@
 var express = require('express');
 var bookrouters = express.Router();
 var mongodb = require('mongodb').MongoClient;
+var bookController = require('../controllers/bookController')();
 
 bookrouters.route('/')
+.all(function(req, res, next){
+    bookController.middleware(req, res, next);
+})
 .get(function(req, res){
-    var url = 'mongodb://localhost:27017';
-    var dbName = 'libraryApp';
-    mongodb.connect(url, function(err, client){
-        var db = client.db('libraryApp');
-        var collection = db.collection('books');
-        collection.find().toArray(function(err, data){
-            res.render('books', 
-            {
-                title:'my page', 
-                nav:[
-                    {name:'Books', link:'/books'},
-                    {name:'Authors', link:'/authors'},
-                ],
-                books: data
-            });
-            client.close();
-        })
-    })
+    bookController.getAllBooks(req, res);
 });
 
 bookrouters.route('/single')
